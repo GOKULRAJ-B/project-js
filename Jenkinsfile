@@ -3,14 +3,14 @@ pipeline {
     agent {
         docker {
             image 'node:20-alpine'
-            args '--network jsN'
+            
         }
     }
 
     environment {
 
         // SonarQube
-        SONAR_HOST_URL = 'http://sonarqube:9000'
+        SONAR_HOST_URL = 'http://host.docker.internal:9000'
         SONAR_PROJECT_KEY = 'project-js'
         SONAR_PROJECT_NAME = 'project-js'
 
