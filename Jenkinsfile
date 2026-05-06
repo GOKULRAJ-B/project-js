@@ -31,7 +31,7 @@ pipeline {
             steps {
                 echo 'Installing dependencies...'
                 sh '''
-                    npm config set cache /tmp/.npm
+                    export npm_config_cache=/tmp/.npm
                     npm install
                 '''
             }
